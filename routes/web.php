@@ -26,3 +26,8 @@ Route::middleware([
         return view('dashboard');
     })->name('dashboard');
 });
+
+Route::get('/checkout', function () {
+    return view('pages.checkout');
+});
+
