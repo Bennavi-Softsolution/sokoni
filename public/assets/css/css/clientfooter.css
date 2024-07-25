@@ -1,0 +1,394 @@
+body{
+    background-color:#D9D9D9;
+    color: black;
+}
+.footer-container {
+    background-color: #D9D9D9;
+    padding-top: 4vh; /* Padding to create white space at the top */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+/* Top frame style */
+.footer-bottom-frame {
+    background-color: #f8f9fa;
+    width: 100%;
+    height: 50vh; /* Adjust height as needed */
+    margin-bottom: 0vh; /* Margin to create the white separator */
+}
+
+/* Separator style */
+.footer-separator {
+    background-color: #D9D9D9;    
+    width: 100%;
+    height: 5vh; /* Adjust height as needed */
+}
+
+/* Bottom frame style */
+.footer-top-frame {
+    background-color: #f8f9fa;
+    width: 100%;
+    height: 40vh; /* Adjust height as needed */
+}
+.kavoon-regular {
+    font-family: "Kavoon", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  .logo-position{
+    margin-right: 2vw;
+    padding-top: 1vh;
+
+
+  }
+  .align-row{
+    display: flex;
+    flex-direction: row;
+    padding: 2%;
+  }
+  .align-row div {
+    margin-right: 2vw; /* Adjust the margin as needed */
+}
+.icon-size {
+    height: 2vw;
+    width: 2.4vw;
+}
+.icon-spacing {
+    margin-right: 2vw;
+}
+.ecomm{
+    padding-top: 3vh;
+    padding-bottom: 1vh;
+}
+.propertyrights{
+padding-top: 0vh;
+padding-bottom: 0vh;
+}
+.rowform{
+    display: flex;
+    flex-direction: row;
+   
+}
+.rowform p {
+    margin: 0; /* Remove default margin */
+    padding-left: 1vw; /* Add some spacing between items */
+    font-size: 1vw; /* Adjust font size if needed */
+}
+.propertyicon{
+    color: black;
+    height: 1vw;
+    width: 1vw;
+   
+}
+.company{
+    color: #ee1313;
+    font-size: 0.6vw;
+}
+.tb{
+    background-color: black;
+    color: #ee1313;
+}
+.btnsend{
+    background-color: #ee1313;
+    color: white;
+}
+.rightside{
+    display: flex;
+    flex-direction: row;
+}
+.subscribe{
+    padding-top: 10vh;
+    font-weight: 700;
+}
+.form{
+    border:2% solid white;
+}
+.border-background{
+    background-color: white;
+}
+.border-size{
+    width: 25vw;
+}
+.align-subscribe{
+display: flex;
+flex-direction: column;
+justify-content: start;
+}
+.form input::placeholder {
+    color: white; /* Pure white placeholder */
+    opacity: 1; /* Remove blur effect */
+}
+table {
+    margin-top: 10vh;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  th, td {
+    padding: 8px;
+    text-align: left;
+    }
+   td{
+  color: #676161f5;
+  }
+  .col1{
+    display:flex;
+  }
+  .card-advert{
+    margin-right: 8vw;
+    margin-top: 6vh;
+  }
+ /* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 460px) {
+    .ecomm{
+        padding-bottom: 10vh;
+    }
+    .column{
+        display: flex;
+        flex-direction: column;
+    }
+    .card-advert{
+        margin-top: 2vh;
+        height: 6vh;
+        width: 20vw;
+
+    }
+    .footer-top-frame {
+        height: 40vh; /* Adjust height for responsiveness */
+        margin-bottom: 1vh; /* Adjust margin as needed */
+        padding: 1vh;
+    }
+    .footer-bottom-frame {
+        height: 40vh; /* Adjust height for responsiveness */
+        padding: 2vh;
+    }
+    .align-row{
+        flex-direction: column;
+        align-items: flex-start;
+        font-weight: 600;
+    }
+    .align-row div {
+        margin-bottom: 1vh;
+        margin-right: 0; /* Reset the margin-right */
+    }
+    h4{
+        margin-top: 4vh;
+        margin-bottom: 3vh;
+        align-items: center;
+    }
+    div.col1{
+        display: none;
+    }
+    .logo-position {
+        display: flex;
+        justify-content: center;
+        padding-top: 2vh;
+        padding-bottom: 2vh;
+    }
+    .icon-size {
+        height: 9vh; /* Increase icon size for visibility */
+        width: 30vw; /* Increase icon size for visibility */
+    }
+    .icon-spacing{
+        margin-left:5vw ;
+    }
+    .rowform {
+        justify-content: center;
+        text-align: center;
+        padding: 2vh;
+    }
+    .rowform p{
+        font-size: small;
+    }
+    .propertyicon{
+        height:1vh;
+        width: 1vh;
+    }
+    table {
+        margin-top: 5vh;
+    }
+    .subscribe {
+        font-size: 4vw; /* Adjust font size for better visibility */
+        padding-top: 3vh;
+    }
+
+    .form {
+        width: 100%; /* Adjust width for responsiveness */
+        margin: 0 auto; /* Center align the form */
+        color: white;
+    }
+
+    .btnsend {
+        width: 100%;
+        font-size: 3vw; /* Adjust font size for better visibility */
+    }
+
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (max-width: 600px) {
+    .footer-top-frame {
+        height: 45vh; /* Adjust height for responsiveness */
+        margin-bottom: 1vh; /* Adjust margin as needed */
+        padding: 2vh;
+    }
+    .footer-bottom-frame {
+        height: 60vh; /* Adjust height for responsiveness */
+        padding: 2vh;
+    }
+    .align-row{
+        flex-direction: column;
+        align-items: flex-start;
+        font-weight: 700;
+    }
+    .align-row div {
+        margin-bottom: 1vh;
+        margin-right: 0; /* Reset the margin-right */
+    }
+    h4{
+        margin-top: -4vh;
+        margin-bottom: -3vh;
+        align-items: center;
+    }
+    div.col1{
+        display: none;
+    }
+    .logo-position {
+        display: flex;
+        justify-content: center;
+        padding-top: 2vh;
+        padding-bottom: 2vh;
+    }
+    .icon-size {
+        height: 5vw; /* Increase icon size for visibility */
+        width: 6.8vw; /* Increase icon size for visibility */
+    }
+    .rowform {
+        justify-content: center;
+        text-align: center;
+        padding: 2vh;
+    }
+    .rowform p{
+        font-size: small;
+    }
+    .propertyicon{
+        height:2vh;
+        width: 3vh;
+    }
+    table {
+        margin-top: 3vh;
+        margin-right: 5vh;
+    }
+    .subscribe {
+        font-size: 3vw; /* Adjust font size for better visibility */
+        padding-top: 3.8vh;
+    }
+    .form {
+        width: 100%; /* Adjust width for responsiveness */
+        margin: 0 auto; /* Center align the form */
+        color: white;
+    }
+
+    .btnsend {
+        width: 50%;
+        font-size: 3vw; /* Adjust font size for better visibility */
+    }
+
+}
+
+
+@media only screen and (max-width: 768px) {
+    .footer-top-frame {
+        height: 60vh; /* Adjust height for responsiveness */
+        margin-bottom: 5vh; /* Adjust margin as needed */
+        padding: 2vh;
+    }
+
+    .footer-bottom-frame {
+        height: 65vh; /* Adjust height for responsiveness */
+        padding: 2vh;
+    }
+
+    .align-row {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .align-row div {
+        margin-bottom: 1vh;
+        margin-right: 0;
+        margin-top: 2vh;
+        font-size: 3vw;
+        
+    }
+    h4{
+        margin-top: -4vh;
+        margin-bottom: -3vh;
+        align-items: center;
+    }
+    div.col1{
+        display: none;
+    }
+
+    .logo-position {
+        display: flex;
+        justify-content: center;
+        padding-top: 0vh;
+        padding-bottom: 2vh;
+    }
+
+    .icon-size {
+        height: 5vw; /* Increase icon size for visibility */
+        width: 5.2vw; /* Increase icon size for visibility */
+    }
+
+    .rowform {
+        justify-content: center;
+        text-align: center;
+        padding: 2vh;
+    }
+
+    table {
+        margin-top: 3vh;
+        margin-right: 3vh;
+    }
+    .rowform p{
+        font-size: small;
+    }
+    .propertyicon{
+        height:2vh;
+        width: 3vh;
+    }
+
+    th{
+        font-size: 3.5vw; /* Adjust font size for better visibility */
+        margin-right: 5vh;
+    }
+td{
+    font-size: 3vw;
+}
+    .subscribe {
+        font-size: 4vw; /* Adjust font size for better visibility */
+        padding-top: 5vh;
+    }
+
+    .form {
+        width: 100%; /* Adjust width for responsiveness */
+        margin: 0 auto; /* Center align the form */
+    }
+
+    .btnsend {
+        width: 100%;
+        font-size: 3vw; /* Adjust font size for better visibility */
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+
+}

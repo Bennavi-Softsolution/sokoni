@@ -1,0 +1,420 @@
+table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  th, td {
+    text-align: left;
+    padding: 1%;
+  }
+  
+  th {
+    background-color: #ee1313;
+    color: white;
+  }
+  /* Table Border Styling*/
+.vamos,
+.vamos td,
+.vamos th
+ {
+    border-bottom: 2px solid #ee1313;
+}
+.table thead th {
+    border-bottom: 2px solid #ee1313;
+}
+.tr-color{
+    background-color: #F2F8F8;
+}
+.search{
+    background-color: #ee1313;
+    color: white;
+    display: flex;
+}
+.borderstyle{
+    margin-top: 2%;
+    border-color: #ee1313;
+    color: #ee1313;
+    padding: 10;
+    border-radius: 40%;
+    font-size: 60%;
+    border: solid 3px #ee1313;
+}
+/* Style for the search container */
+.search-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5vh 0; /* Vertical margin using viewport height */
+}
+
+/* Style for the search input field */
+.search-input {
+    width: vw; /* Width using viewport width */
+    padding: 1.5vh 2vw; /* Padding using viewport height and width */
+    border: none;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    outline: none;
+    color: white;
+    background-color: #ee1313;
+    font-size: 1.5vw; /* Font size using viewport width */
+}
+
+/* Style for the search button */
+.search-button {
+    padding: 1.5vh 2vw; /* Padding using viewport height and width */
+    border: none;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    outline: none;
+    background-color: #ee1313;
+    color: white;
+    cursor: pointer;
+    font-size: 1.5vw; /* Font size using viewport width */
+}
+
+/* Ensure the search button and input field are the same height */
+.search-input, .search-button {
+    height: 6vh; /* Height using viewport height */
+}
+
+/* Change the placeholder text color */
+.search-input::placeholder {
+    color: white;
+    opacity: 0.7; /* Adjust opacity as needed */
+}
+.info-card {
+    background-color: #ee1313;
+    color: white;
+    padding: 1vh 2vw; /* Padding using viewport height and width */
+    border-radius: 0.5vw; /* Slightly rounded corners */
+    font-size: 1vw; /* Font size using viewport width */
+    display: inline-block; /* Ensure it only takes as much space as necessary */
+    margin: 1vh 0; /* Margin using viewport height */
+}
+/* For devices with width up to 460px */
+@media (max-width: 460px) {
+    table.vamos th, table.vamos td {
+        padding: 0.5vh 1vw; /* Reduce padding */
+        font-size: 2vw; /* Adjust font size */
+    }
+      table.vamos td {
+        padding: 0.5vh 1vw; /* Reduce padding */
+        font-size: 2vw; /* Adjust font size */
+    }
+
+    .name-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .name-container span {
+        display: block;
+    }
+
+    .single-name {
+        display: flex;
+        align-items: center;
+    }
+
+    .single-name img {
+        margin-right: 1vw;
+    }
+
+    .single-name span {
+        white-space: nowrap;
+    }
+
+    .double-name {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .double-name img {
+        margin-right: 1vw;
+    }
+
+    .double-name span {
+        white-space: normal;
+    }
+    .container {
+        width: 5em;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        position: flex-start;
+    }
+
+    .row {
+        flex-direction: column;
+        align-items:flex-start;
+    }
+
+    .col-4, .col-8 {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        text-align:right;
+    }
+
+    .col-4 img {
+        display: none;
+        max-width: 100%;
+        height: auto;
+    }
+    .search-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 5vh 0;
+        padding: 0.5vh 1vw; /* Reduce padding */
+        font-size: 1vw;
+        flex-direction: row;
+        width: 100%;
+        align-items: center;
+    }
+
+    .search-input, .search-button {
+        height: 1vh;
+    }
+
+    .search-input {
+        flex: 1;
+        width: 10vw; /* Width using viewport width */
+        padding: 1vh 3vw; /* Padding using viewport height and width */
+        border: none;
+        border-top-left-radius: 15px;
+        border-bottom-left-radius: 15px;
+        outline: none;
+        color: white;
+        background-color: #ee1313;
+        font-size: 1.5vw; /* Font size using viewport width */
+    }
+
+    .search-button {
+    width: 5vw;
+    padding: 1vh 0vw; /* Padding using viewport height and width */
+    border: none;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    outline: none;
+    background-color: #ee1313;
+    color: white;
+    cursor: pointer;
+    font-size: 1.5vw; /* Font size using viewport width */
+    }
+
+    .table-responsive {
+        overflow-x: auto;
+    }
+
+    .info-card {
+        font-size: 3.5vw;
+        margin: 1vh 0;
+        text-align: left;
+        width: 100%;
+    }
+
+    .borderstyle {
+        font-size: 3.5vw;
+        margin: 1vh 0;
+        width: 50%;
+    }
+
+    table.vamos th, table.vamos td {
+        display: table-cell;
+        padding: 1vh 1vw;
+    }
+
+    table.vamos th {
+        white-space: nowrap;
+    }
+
+    table.vamos th:nth-child(2),
+    table.vamos td:nth-child(2),
+    table.vamos th:nth-child(3),
+    table.vamos td:nth-child(3),
+    table.vamos th:nth-child(5),
+    table.vamos td:nth-child(5),
+    table.vamos th:nth-child(6),
+    table.vamos td:nth-child(6) {
+        white-space: nowrap;
+    }
+
+    .bottom-container {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        padding: 1vh;
+        text-align: left;
+    }
+
+    .bottom-container .info-card {
+        display: inline-block;
+    }
+
+    .bottom-container .borderstyle {
+        display: block;
+        margin-top: 1vh;
+        width: 50%;
+    }
+    .info-card{
+        display: none;
+    }
+    .btn{
+        display: none;
+    }
+}
+/* For devices with width up to 768px */
+@media (max-width: 768px) {
+    table.vamos td {
+        padding: 0.75vh 1.5vw; /* Reduce padding */
+        font-size: 2.5vw; /* Adjust font size */
+    }
+
+    .name-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .name-container span {
+        display: block;
+    }
+
+    .single-name {
+        display: flex;
+        align-items: center;
+    }
+
+    .single-name img {
+        margin-right: 1vw;
+    }
+
+    .single-name span {
+        white-space: nowrap;
+    }
+
+    .double-name {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .double-name img {
+        margin-right: 1vw;
+    }
+
+    .double-name span {
+        white-space: normal;
+    }
+    .container {
+        width: 100%;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .col-4, .col-8 {
+        width: 100%;
+        text-align: center;
+    }
+
+    .col-4 img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+        margin-bottom: 2vh;
+    }
+
+    .search-container {
+        flex-direction: row;
+        width: 60%;
+        margin: 2vh 0;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .search-input, .search-button {
+        font-size: 3vw;
+        height: 6vh;
+    }
+
+    .search-input {
+        width: 70%;
+    }
+
+    .search-button {
+        width: 30%;
+    }
+
+    .table-responsive {
+        overflow-x: auto;
+    }
+
+    .info-card {
+        font-size: 2.5vw;
+        margin: 1vh 0;
+        text-align: left;
+        width: 100%;
+    }
+
+    .borderstyle {
+        font-size: 2.5vw;
+        margin: 1vh 0;
+        width: 40%;
+    }
+
+    table.vamos th, table.vamos td {
+        display: table-cell;
+        padding: 1vh 1vw;
+    }
+
+    table.vamos th {
+        white-space: nowrap;
+    }
+
+    table.vamos th:nth-child(2),
+    table.vamos td:nth-child(2),
+    table.vamos th:nth-child(3),
+    table.vamos td:nth-child(3),
+    table.vamos th:nth-child(5),
+    table.vamos td:nth-child(5),
+    table.vamos th:nth-child(6),
+    table.vamos td:nth-child(6) {
+        white-space: nowrap;
+    }
+
+    .bottom-container {
+        position: relative;
+        bottom: 0;
+        left: 0;
+        padding: 1vh;
+        text-align: left;
+    }
+
+    .bottom-container .info-card {
+        display: inline-block;
+    }
+
+    .bottom-container .borderstyle {
+        display: block;
+        margin-top: 1vh;
+        width: auto;
+    }
+
+    .info-card, .btn {
+        display: block;
+    }
+    .col-4 img {
+        display: none;
+    }
+
+}
+

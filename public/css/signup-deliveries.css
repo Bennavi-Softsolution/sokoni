@@ -1,0 +1,144 @@
+/* SIGNUP PAGE STYLING */
+#signup-page{
+    background-color: #ffff;
+    padding: 3rem 5rem;
+}
+
+#form-page{
+    padding: 4rem 8rem;
+}
+
+#form-input{
+    width : 100vh;
+    padding: 0.5rem;
+}
+
+.inputfield{
+    border-color: #ff896e;
+}
+
+.inputfield:focus{
+    border-color: #EE1313; 
+    box-shadow: 5px 5px rgba(255, 87, 51, 0.5);
+}
+
+.inputfield:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 30px rgb(255, 236, 236) inset !important; /* Change 'white' to the desired background color */
+    -webkit-text-fill-color: #495057 !important; /* Change text color to match */
+}
+
+.inputfield:-webkit-autofill:focus {
+    border-color: #FF5733 !important;
+    box-shadow: 0 5px 5px rgba(255, 87, 51, 0.5) !important;
+    -webkit-box-shadow: 0 0 0 30px rgb(255, 236, 236) inset !important; /* Ensure background color remains consistent */
+}
+
+.option{
+    background-color:  rgb(255, 236, 236);
+}
+
+.option:focus, option:active{
+    background-color:  rgb(255, 236, 236);
+}
+
+/* .inputfield:placeholder-shown{
+    color: white;
+} */
+
+.btn-color{
+    background-color: #EE1313;
+    color: white; /* Text color */
+    border-color: #EE1313;
+    width: 50%;
+    position: relative;
+    left: 20%;
+    margin: 1rem 0;
+}
+
+.btn-color:hover,
+.btn-color:focus {
+    background: #eb3636; /* Darker shade of red for hover/focus */
+    border-color: rgba(238, 19, 19, 0.2); /* Adjust border color accordingly */
+    color: white;
+}
+
+
+/* DELIVERY PAGE STYLING */
+
+.delivery{
+    padding: 2rem;
+}
+
+.data{
+    padding: 2rem;
+    width: 75vw;
+    border: 0.2px solid grey;
+    border-radius: 20px;
+    margin: 1.5rem auto;
+    display: none;
+}
+
+.title{
+    display: flex;
+    justify-content: space-between;
+    width: 60vw;
+    margin: auto;
+    background-color: #EE1313;
+    color: white;
+    padding: 0.5rem 4rem;
+    position: relative;
+    align-items: center;
+    border-radius: 1rem;
+}
+
+.title2{
+    margin-top: 1rem;
+}
+
+.title p{
+    font-size: 1.2rem;
+    text-align: center;
+    font-weight: 500 ;
+}
+
+.title i{
+    font-size: 1.7rem;
+    cursor: pointer;
+    transition: 0.3s ease;
+    display: flex;
+    align-items: center;
+}
+
+.icon-hidden{
+    display: none;
+}
+
+.title i:hover{
+    font-size: 2rem;
+    height: 2.1rem;
+    font-weight: 2.1rem;
+    background-color: #f07a7a;
+    display: flex;
+    align-items: center;
+    border-radius: 45%;
+}
+
+@media screen  and (max-width:550px) {
+    .data{
+        width: 90vw;
+        padding: 1rem 0;
+        margin: 1rem 1rem 0 0;
+    }
+
+    .title{
+        margin-top: 1rem;
+    }
+
+    .title p{
+        font-size: 1rem;
+    }
+
+    .title i{
+        font-size: 1.5rem;
+    }
+}
