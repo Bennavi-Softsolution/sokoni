@@ -31,3 +31,7 @@ Route::get('/checkout', function () {
     return view('pages.checkout');
 });
 
+Route::get('/cart', function () {
+    return view('pages.cart');
+});
+
