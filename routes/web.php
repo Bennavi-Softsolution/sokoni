@@ -17,6 +17,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+
+
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),
@@ -31,4 +33,6 @@ Route::middleware([
 });
 
 
-
+Route::get('/manage-product', function () {
+    return view('pages.manage-product');
+});

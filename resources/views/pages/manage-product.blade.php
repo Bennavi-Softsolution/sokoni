@@ -1,12 +1,12 @@
-@extends('layouts.app')
-
+@extends('layouts.app2')
+@section('title','Manage Products')
 @section('manage-product')
 
 <div class="container-fluid mt-4">
     <div class="row mb-3">
         <!--Add item button starts here-->
         <div class="col-md-6 text-right">
-            <button type="button" class="btn btn-custom" data-toggle="modal" data-target="#exampleModal">
+            <button type="button" class="btn" style="background-color:#EE1313;color:whitesmoke;" data-toggle="modal" data-target="#exampleModal">
                 <i class="bi bi-plus-circle-fill"></i> Add Item
             </button>
         </div>
@@ -57,10 +57,10 @@
                     <td>10</td>
                     <td>$19.99</td>
                     <td>
-                        <button href="#" class="btn btn-sm btn-outline-secondary mb-1 mb-sm-0 mr-2" type="button"data-toggle="modal" data-target=".bd-example-modal-lg" >
+                        <button href="#" class="btn btn-sm btn-outline-primary mb-1 mb-sm-0 mr-2" type="button"data-toggle="modal" data-target=".bd-example-modal-lg" >
                             <i class="bi bi-pencil-fill"></i> Edit
                         </button>
-                        <a href="#" class="btn btn-sm btn-custom" onclick="return confirm('Are you sure?');">
+                        <a href="#" style="background-color:#EE1313;color:whitesmoke;" class="btn btn-sm btn-custom" onclick="return confirm('Are you sure?');">
                             <i class="bi bi-trash-fill"></i> Delete
                         </a>
                     </td>
@@ -175,3 +175,4 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <!--CDN javascript linking ends here-->
+    
