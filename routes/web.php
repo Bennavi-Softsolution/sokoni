@@ -28,6 +28,9 @@ Route::middleware([
     Route::get('/checkout', function () {
         return view('pages.checkout');
     })->name('checkout');
+    Route::get('/product', function () {
+        return view('pages.product');
+    })->name('product');
 });
 
 
