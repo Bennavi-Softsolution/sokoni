@@ -1,5 +1,6 @@
 @extends('layouts.app2')
 @extends('pages.navbar')
+@section('title', 'Sokoni')
 
 @section('welcome')
     <!-- Styles -->
@@ -133,8 +134,6 @@
             }
         }
     </style>
-
-
 
 
     <div class="container-fluid mt-3">
