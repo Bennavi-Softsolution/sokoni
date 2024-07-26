@@ -1,8 +1,8 @@
 @extends('layouts.app2')
-
+@extends('pages.navbar')
 @section('title', 'Checkout')
 
-
+@section('checkout')
 <style>
     /* Custom CSS for animations */
     @keyframes slideInFromLeft {
@@ -372,3 +372,4 @@
         }
     });
 </script>
+@endsection
