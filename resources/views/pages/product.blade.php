@@ -1,5 +1,5 @@
-@extends('layouts.app')
-@extends('layouts.navbar')
+@extends('layouts.app2')
+@extends('pages.navbar')
 @section('title', 'Product Page')
 
 @section('product')
@@ -33,6 +33,13 @@
         border-bottom: 3px solid red; */
         }
 
+        .button-container{
+            display: flex;
+            gap: 10px;
+        }
+        .button-container a{
+            text-decoration: none;
+        }
 
         
 
@@ -135,16 +142,10 @@
                             </div>
                         </div>
                         <div class="button-container mt-3">
-                            <a href="#" class="btn buy-button btn-warning shadow-0">Buy now</a>
-                            <a href="#" class="btn cart-button btn-danger shadow-0"><i
-                                    class="me-1 fa fa-shopping-basket"></i>Add to cart</a>
+                            <a href="#" class="btn-primary buy-button btn-warning shadow-0 text-white">Buy now</a>
+                            <a href="#" class="btn-primary cart-button btn-danger shadow-0 text-white"><i class="me-1 fa fa-shopping-basket"></i>Add to cart</a>
                         </div>
                     </div>
-            </div>
-
-            <div class="button-container mt-3">
-                <a href="#" class="btn-primary buy-button text-white ">Buy now</a>
-                <a href="#" class="btn-primary cart-button text-white "><i class="me-1 fa fa-shopping-basket"></i>Add to cart</a>
             </div>
          </div>
 
