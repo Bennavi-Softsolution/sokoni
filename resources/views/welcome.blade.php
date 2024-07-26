@@ -1,65 +1,79 @@
 @extends('layouts.app2')
 @extends('pages.navbar')
+
 @section('title', 'Sokoni')
 
 @section('welcome')
     <!-- Styles -->
     <style>
-        /* Custom sidebar and nav-pills styles */
+        /* Container styles */
         .container-fluid {
             display: flex;
-            gap: 20px;
-            /* Gap between sidebar and main content */
+            gap: 30px;
+            /* Increased gap for a more spacious layout */
         }
 
+        /* Sidebar styling */
         .sidebar {
-            width: 240px;
+            width: 270px;
             padding: 20px;
             position: sticky;
             top: 20px;
-            transition: all 0.3s ease;
-            box-shadow: 0 0 5px rgba(129, 110, 110, 0.3);
-            border-radius: 10px;
-            /* Smoother rounding */
-            background-color: #f8f9fa;
-            /* Light background color */
+            transition: all 0.4s ease;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            border-radius: 15px;
+            background: linear-gradient(135deg, #ee1313 0%, #ff6f6f 100%);
+            /* Gradient background for vibrant look */
             z-index: 1;
-            /* Ensure sidebar stays above main content */
         }
 
         .sidebar:hover {
-            transform: translateX(5px);
-            box-shadow: 0 0 10px rgba(129, 110, 110, 0.3);
-            /* Darker shadow on hover */
+            transform: translateX(20px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+            /* Enhanced shadow on hover */
         }
 
         .scrollable-sidebar {
             overflow-y: auto;
             max-height: calc(100vh - 120px);
+            padding-right: 10px;
+            /* Added padding for scrollbar */
         }
 
+        /* Navigation link styles */
         .nav-pills .nav-link {
-            color: #495057;
-            padding: 10px 20px;
-            margin-bottom: 8px;
+            color: #fff;
+            padding: 12px 20px;
+            margin-bottom: 12px;
             display: flex;
             align-items: center;
-            transition: background-color 0.3s ease, color 0.3s ease;
+            transition: all 0.4s ease;
+            border-radius: 8px;
+            border: 1px solid transparent;
+            background: rgba(255, 255, 255, 0.1);
+            /* Subtle background for non-active links */
+            backdrop-filter: blur(10px);
+            /* Frosted glass effect */
         }
 
         .nav-pills .nav-link i {
-            margin-right: 10px;
+            margin-right: 15px;
+            transition: color 0.4s ease;
         }
 
         .nav-pills .nav-link:hover {
-            background-color: #e9ecef;
-            color: #cecbcb;
+            background: rgba(255, 255, 255, 0.2);
+            color: #ee1313;
+            
+            /* Slightly scale up on hover */
         }
 
         .nav-pills .nav-link.active {
-            background-color: #007bff;
-            color: #fff;
-            border-color: #007bff;
+            background-color: #fff;
+            color: #ee1313;
+            border-color: #ee1313;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            /* Box shadow for active link */
         }
 
         #myTab.nav-pills {
@@ -69,33 +83,29 @@
 
         .main-content {
             flex: 1;
-            /* Take remaining space */
             padding: 20px;
-
-
+            /* Padding for content area */
+            background-color: #f8f9fa;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            /* Shadow for main content area */
         }
 
         @media (max-width: 768px) {
             .container-fluid {
                 flex-direction: column;
-                /* Stack sidebar and main content vertically */
                 gap: 0;
-                /* No gap between sidebar and main content on small screens */
             }
 
             .sidebar {
                 width: 100%;
-                /* Full width sidebar on small screens */
-                padding: 10px;
+                padding: 15px;
                 margin-bottom: 20px;
-                /* Optional: Add space below sidebar on small screens */
             }
 
             #myTab.nav-pills {
-                display: flex;
                 flex-direction: row;
                 flex-wrap: nowrap;
-                /* Ensures items do not wrap on smaller screens */
             }
         }
 
@@ -112,64 +122,78 @@
         /* Dark mode adjustments */
         @media (prefers-color-scheme: dark) {
             .sidebar {
-                background-color: #343a40;
-                /* Darker background color */
-                color: #f8f9fa;
-                /* Lighter text color */
+                background: linear-gradient(135deg, #1c1c1c 0%, #333 100%);
+                color: #eaeaea;
+                /* Dark gradient background */
             }
 
             .nav-pills .nav-link {
-                color: #f8f9fa;
-                /* Lighter text color */
+                color: #eaeaea;
+                background: rgba(0, 0, 0, 0.2);
+                /* Darker background for non-active links */
             }
 
             .nav-pills .nav-link:hover {
-                background-color: #495057;
-                /* Darker background color on hover */
+                background: rgba(0, 0, 0, 0.3);
+                color: #ee1313;
             }
 
             .nav-pills .nav-link.active {
-                background-color: #6c757d;
-                /* Darker active background color */
+                background-color: #333;
+                color: #ee1313;
+                border-color: #ee1313;
             }
         }
     </style>
-
 
     <div class="container-fluid mt-3">
         <!-- Sidebar container (first column) -->
         <div class="sidebar">
             <div class="scrollable-sidebar">
-                <ul id="myTab" class="nav nav-pills gap-2">
+                <ul id="myTab" class="nav nav-pills">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#shoes"><i class="fas fa-shoe-prints"></i>
-                            Shoes</a>
+                        <a class="nav-link active" aria-current="page" href="#shoes">
+                            <i class="fas fa-shoe-prints"></i> Shoes
+                        </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#watches"><i class="fas fa-clock"></i> Watches</a>
+                        <a class="nav-link" href="#watches">
+                            <i class="fas fa-clock"></i> Watches
+                        </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#accessories"><i class="fas fa-headphones"></i> Accessories</a>
+                        <a class="nav-link" href="#accessories">
+                            <i class="fas fa-headphones"></i> Accessories
+                        </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#electronics"><i class="bi bi-joystick"></i> Sporting Goods</a>
+                        <a class="nav-link" href="#electronics">
+                            <i class="bi bi-joystick"></i> Sporting Goods
+                        </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#Toys"><i class="bi bi-car-front-fill"></i> Toys</a>
+                        <a class="nav-link" href="#toys">
+                            <i class="bi bi-car-front-fill"></i> Toys
+                        </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#handb"><i class="fas fa-headphones"></i> Health & Beauty</a>
+                        <a class="nav-link" href="#handb">
+                            <i class="fas fa-headphones"></i> Health & Beauty
+                        </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#homedecor"><i class="bi bi-shuffle"></i> Home Decor</a>
+                        <a class="nav-link" href="#homedecor">
+                            <i class="bi bi-shuffle"></i> Home Decor
+                        </a>
                     </li>
-
-
-                    <!-- Add more items as needed -->
                 </ul>
             </div>
         </div>
 
+        <!-- Main content container (second column) -->
+        <div class="main-content">
+            @yield('main-content')
+        </div>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -177,7 +201,6 @@
 
     <script>
         $(document).ready(function() {
-            // Initialize Bootstrap tabs
             $('#myTab a').on('click', function(e) {
                 e.preventDefault();
                 $(this).tab('show');

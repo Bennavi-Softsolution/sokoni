@@ -18,7 +18,7 @@
                 </form>
             </div>
 
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <ul class="navbar-nav me-6 mb-2 mb-lg-0">
                 <li class="nav-item">
                     <a class="nav-link me-4" href="#">
                         <i class="fa-solid fa-cart-shopping"></i>
@@ -27,7 +27,7 @@
             </ul>
 
             @if (Route::has('login'))
-                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <ul class="navbar-nav ms-auto mb-2 me-5 mb-lg-0">
                     @auth
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
@@ -53,11 +53,11 @@
                         </li>
                     @else
                         <li class="nav-item">
-                            <a href="{{ route('login') }}" class="btn btn-sm btn-primary me-2">Login</a>
+                            <a href="{{ route('login') }}" class="btn btn-sm btn-danger me-2">Login</a>
                         </li>
                         @if (Route::has('register'))
                             <li class="nav-item">
-                                <a href="{{ route('register') }}" class="btn btn-sm btn-primary me-3">Register</a>
+                                <a href="{{ route('register') }}" class="btn btn-sm btn-danger me-3">Register</a>
                             </li>
                         @endif
                     @endauth
