@@ -35,7 +35,11 @@ Route::middleware([
     })->name('product');
 });
 
+Route::get('/cart', function () {
+    return view('pages.cart');
+});
 
 Route::get('/manage-product', function () {
     return view('pages.manage-product');
 });
+

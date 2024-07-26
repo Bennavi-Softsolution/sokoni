@@ -1,8 +1,6 @@
-@extends('layouts.app')
-@extends('layouts.navbar')
+@extends('layouts.app2')
 @section('title', 'shopping cart')
 
-@section('cart')
 
     <?php
     session_start();
@@ -310,4 +308,4 @@
             document.querySelector('.added-to-basket').style.display = 'none';
         });
     </script>
-@endsection
+
