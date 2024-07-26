@@ -8,21 +8,22 @@
     <style>
         :root {
             --primary-color: #ee1313; /* Main accent color */
-            --sidebar-bg: #ffffff; /* Clean white background for sidebar */
-            --sidebar-hover-bg: #f5f5f5; /* Subtle hover background */
-            --sidebar-active-bg: #e9ecef; /* Slightly darker background for active state */
+            --sidebar-gradient-start: #e2e2e2; /* Light gray gradient start */
+            --sidebar-gradient-end: #ffffff; /* White gradient end */
+            --sidebar-hover-bg: #f2f2f2; /* Subtle hover background */
+            --sidebar-active-bg: #e0e0e0; /* Slightly darker background for active state */
             --text-color: #333; /* Dark text for readability */
-            --border-color: #ddd; /* Light border color */
-            --shadow-color: rgba(0, 0, 0, 0.1); /* Light shadow for a subtle depth effect */
-            --transition-speed: 0.3s; /* Smooth transition speed */
-            --radius: 10px; /* Rounded corners */
-            --font-family: 'Helvetica Neue', Arial, sans-serif; /* Clean, modern font */
+            --border-color: #d1d1d1; /* Light border color */
+            --shadow-color: rgba(0, 0, 0, 0.1); /* Light shadow for subtle depth */
+            --transition-speed: 0.4s; /* Smooth transition speed */
+            --radius: 12px; /* Rounded corners */
+            --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Elegant font */
         }
 
         body {
             font-family: var(--font-family);
             color: var(--text-color);
-            background-color: #f8f9fa; /* Light background for the overall page */
+            background-color: #f9f9f9; /* Very light background for the overall page */
             margin: 0;
             padding: 0;
         }
@@ -36,33 +37,34 @@
 
         /* Sidebar styling */
         .sidebar {
-            width: 280px;
+            width: 300px;
             padding: 20px;
             position: sticky;
             top: 20px;
             transition: all var(--transition-speed) ease;
-            box-shadow: 0 4px 8px var(--shadow-color);
+            box-shadow: 0 6px 12px var(--shadow-color);
             border-radius: var(--radius);
-            background: var(--sidebar-bg);
+            background: linear-gradient(135deg, var(--sidebar-gradient-start), var(--sidebar-gradient-end)); /* Gradient background */
             border: 1px solid var(--border-color);
+            overflow: hidden; /* Ensure the gradient looks good */
         }
 
         .sidebar:hover {
-            transform: translateX(5px);
-            box-shadow: 0 6px 12px var(--shadow-color);
+            transform: translateX(8px);
+            box-shadow: 0 8px 16px var(--shadow-color);
         }
 
         .scrollable-sidebar {
             overflow-y: auto;
             max-height: calc(100vh - 120px);
-            padding-right: 10px;
+            padding-right: 12px;
         }
 
         /* Navigation link styles */
         .nav-pills .nav-link {
             color: var(--text-color);
-            padding: 12px 16px;
-            margin-bottom: 8px;
+            padding: 14px 20px;
+            margin-bottom: 10px;
             display: flex;
             align-items: center;
             transition: all var(--transition-speed) ease;
@@ -72,23 +74,22 @@
         }
 
         .nav-pills .nav-link i {
-            margin-right: 12px;
-            font-size: 1.1em;
+            margin-right: 14px;
+            font-size: 1.2em;
             transition: color var(--transition-speed) ease;
         }
 
         .nav-pills .nav-link:hover {
             background: var(--sidebar-hover-bg);
             color: var(--primary-color);
-            
-            box-shadow: 0 2px 6px var(--shadow-color);
+            box-shadow: 0 4px 8px var(--shadow-color);
         }
 
         .nav-pills .nav-link.active {
             background-color: var(--sidebar-active-bg);
             color: var(--primary-color);
             border-color: var(--primary-color);
-            box-shadow: 0 4px 8px var(--shadow-color);
+            box-shadow: 0 6px 12px var(--shadow-color);
         }
 
         #myTab.nav-pills {
@@ -99,9 +100,9 @@
         .main-content {
             flex: 1;
             padding: 20px;
-           
+            background-color: #ffffff;
             border-radius: var(--radius);
-            box-shadow: 0 4px 8px var(--shadow-color);
+            box-shadow: 0 6px 12px var(--shadow-color);
         }
 
         @media (max-width: 768px) {
@@ -145,35 +146,37 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#watches">
-                            <i class="fas fa-clock"></i> Watches
+                            <i class="fas fa-stopwatch"></i> Watches
                         </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#accessories">
-                            <i class="fas fa-headphones"></i> Accessories
+                            <i class="fas fa-glasses"></i> Accessories
                         </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#electronics">
-                            <i class="bi bi-joystick"></i> Sporting Goods
+                            <i class="fas fa-tv"></i> Electronics
                         </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#toys">
-                            <i class="bi bi-car-front-fill"></i> Toys
+                            <i class="fas fa-gamepad"></i> Toys
                         </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#handb">
-                            <i class="fas fa-headphones"></i> Health & Beauty
+                            <i class="fas fa-user-md"></i> Health & Beauty
                         </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#homedecor">
-                            <i class="bi bi-shuffle"></i> Home Decor
+                            <i class="fas fa-couch"></i> Home Decor
                         </a>
                     </li>
                 </ul>
+                
+                
             </div>
         </div>
 
