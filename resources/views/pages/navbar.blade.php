@@ -1,27 +1,3 @@
-<style>
-/*
-.navbar-brand {
-    font-family: 'Comic Sans MS', cursive, sans-serif;
-    font-size: 32px;
-    font-weight: bold;
-    color: #ff6347; /* Tomato color for a playful look */
-/*    text-transform: uppercase;
-    letter-spacing: 2px;
-    padding: 12px 18px;
-    border: 3px dashed #ff6347; /* Dashed border for a playful touch */
-/*    border-radius: 5px; /* Rounded corners for the border */
-/*    transition: color 0.3s ease, border-color 0.3s ease;
-}
-
-.navbar-brand:hover {
-/*    color: #20b2aa; /* Light sea green color on hover */
-/*    border-color: #20b2aa; /* Change border color on hover */
-/*
-}
-*/
-
-</style>
-
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container-fluid">
         <a class="navbar-brand" href="{{ url('/') }}">Sokoni</a>

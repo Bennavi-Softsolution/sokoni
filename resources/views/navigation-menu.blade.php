@@ -217,3 +217,5 @@
         </div>
     </div>
 </nav>
+
+@yield('welcome')
