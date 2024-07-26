@@ -57,10 +57,10 @@
                     <td>10</td>
                     <td>$19.99</td>
                     <td>
-                        <button href="#" class="btn btn-sm btn-outline-secondary mb-1 mb-sm-0 mr-2" style="background-color:#EE1313;color:whitesmoke;"type="button"data-toggle="modal" data-target=".bd-example-modal-lg" >
+                        <button href="#" class="btn btn-sm btn-outline-primary mb-1 mb-sm-0 mr-2" type="button"data-toggle="modal" data-target=".bd-example-modal-lg" >
                             <i class="bi bi-pencil-fill"></i> Edit
                         </button>
-                        <a href="#" class="btn btn-sm btn-custom" onclick="return confirm('Are you sure?');">
+                        <a href="#" style="background-color:#EE1313;color:whitesmoke;" class="btn btn-sm btn-custom" onclick="return confirm('Are you sure?');">
                             <i class="bi bi-trash-fill"></i> Delete
                         </a>
                     </td>
