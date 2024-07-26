@@ -6,74 +6,84 @@
 @section('welcome')
     <!-- Styles -->
     <style>
+        :root {
+            --primary-color: #ee1313;
+            --secondary-color: #f5f5f5;
+            --hover-bg-color: rgba(0, 0, 0, 0.05);
+            --active-bg-color: #eee;
+            --text-color: #333;
+            --border-color: #ddd;
+            --shadow-color: rgba(0, 0, 0, 0.2);
+            --transition-speed: 0.3s;
+            --radius: 12px;
+        }
+
         /* Container styles */
         .container-fluid {
             display: flex;
             gap: 30px;
-            /* Increased gap for a more spacious layout */
+            padding: 20px;
+            /* Added padding for a more polished look */
         }
 
         /* Sidebar styling */
         .sidebar {
-            width: 270px;
+            width: 300px;
             padding: 20px;
             position: sticky;
             top: 20px;
-            transition: all 0.4s ease;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-            border-radius: 15px;
-            background: linear-gradient(135deg, #ee1313 0%, #ff6f6f 100%);
-            /* Gradient background for vibrant look */
+            transition: all var(--transition-speed) ease;
+            box-shadow: 0 8px 16px var(--shadow-color);
+            border-radius: var(--radius);
+            background: linear-gradient(135deg, #ffffff 0%, #f5f5f5 100%);
+            /* Elegant gradient background */
             z-index: 1;
         }
 
         .sidebar:hover {
-            transform: translateX(20px);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
-            /* Enhanced shadow on hover */
+            transform: translateX(8px);
+            box-shadow: 0 12px 24px var(--shadow-color);
+            /* Subtle hover effect */
         }
 
         .scrollable-sidebar {
             overflow-y: auto;
             max-height: calc(100vh - 120px);
             padding-right: 10px;
-            /* Added padding for scrollbar */
         }
 
         /* Navigation link styles */
         .nav-pills .nav-link {
-            color: #fff;
+            color: var(--text-color);
             padding: 12px 20px;
-            margin-bottom: 12px;
+            margin-bottom: 10px;
             display: flex;
             align-items: center;
-            transition: all 0.4s ease;
-            border-radius: 8px;
+            transition: background-color var(--transition-speed) ease, color var(--transition-speed) ease;
+            border-radius: var(--radius);
             border: 1px solid transparent;
-            background: rgba(255, 255, 255, 0.1);
+            background: rgba(0, 0, 0, 0.05);
             /* Subtle background for non-active links */
-            backdrop-filter: blur(10px);
-            /* Frosted glass effect */
         }
 
         .nav-pills .nav-link i {
-            margin-right: 15px;
-            transition: color 0.4s ease;
+            margin-right: 12px;
+            font-size: 1.2em;
         }
 
         .nav-pills .nav-link:hover {
-            background: rgba(255, 255, 255, 0.2);
-            color: #ee1313;
+            background: var(--hover-bg-color);
+            color: var(--primary-color);
             
-            /* Slightly scale up on hover */
+            /* Slight scale effect on hover */
         }
 
         .nav-pills .nav-link.active {
-            background-color: #fff;
-            color: #ee1313;
-            border-color: #ee1313;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-            /* Box shadow for active link */
+            background-color: var(--active-bg-color);
+            color: var(--primary-color);
+            border-color: var(--primary-color);
+            box-shadow: 0 4px 8px var(--shadow-color);
+            /* Elegant shadow for active link */
         }
 
         #myTab.nav-pills {
@@ -84,10 +94,9 @@
         .main-content {
             flex: 1;
             padding: 20px;
-            /* Padding for content area */
-            background-color: #f8f9fa;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            background-color: #ffffff;
+            border-radius: var(--radius);
+            box-shadow: 0 4px 12px var(--shadow-color);
             /* Shadow for main content area */
         }
 
@@ -95,12 +104,14 @@
             .container-fluid {
                 flex-direction: column;
                 gap: 0;
+                padding: 10px;
             }
 
             .sidebar {
                 width: 100%;
                 padding: 15px;
-                margin-bottom: 20px;
+                box-shadow: none;
+                /* Remove shadow on smaller screens */
             }
 
             #myTab.nav-pills {
@@ -121,27 +132,34 @@
 
         /* Dark mode adjustments */
         @media (prefers-color-scheme: dark) {
+            :root {
+                --primary-color: #ff5a5f;
+                --hover-bg-color: rgba(255, 255, 255, 0.1);
+                --active-bg-color: #333;
+                --text-color: #eaeaea;
+                --border-color: #444;
+                --shadow-color: rgba(0, 0, 0, 0.4);
+            }
+
             .sidebar {
                 background: linear-gradient(135deg, #1c1c1c 0%, #333 100%);
-                color: #eaeaea;
-                /* Dark gradient background */
+                color: var(--text-color);
             }
 
             .nav-pills .nav-link {
-                color: #eaeaea;
-                background: rgba(0, 0, 0, 0.2);
-                /* Darker background for non-active links */
+                color: var(--text-color);
+                background: rgba(0, 0, 0, 0.1);
             }
 
             .nav-pills .nav-link:hover {
-                background: rgba(0, 0, 0, 0.3);
-                color: #ee1313;
+                background: var(--hover-bg-color);
+                color: var(--primary-color);
             }
 
             .nav-pills .nav-link.active {
-                background-color: #333;
-                color: #ee1313;
-                border-color: #ee1313;
+                background-color: var(--active-bg-color);
+                color: var(--primary-color);
+                border-color: var(--primary-color);
             }
         }
     </style>
