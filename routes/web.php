@@ -27,12 +27,11 @@ Route::middleware([
     Route::get('/dashboard', function () {
         return view('dashboard');
     })->name('dashboard');
+    Route::get('/checkout', function () {
+        return view('pages.checkout');
+    })->name('checkout');
 });
 
-Route::get('/checkout', function () {
-    return view('pages.checkout');
-    
-});
 
 Route::get('/manage-product', function () {
     return view('pages.manage-product');
